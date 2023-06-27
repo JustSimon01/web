@@ -1,0 +1,6 @@
+.page {
+  box-sizing: border-box;
+  background-color: rgba(238, 238, 238, 1);
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+  color: rgb(0, 0, 0);
+}

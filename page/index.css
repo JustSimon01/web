@@ -1,27 +1,29 @@
 @import url(../vendor/normalize.css);
 @import url(../vendor/fonts.css);
-@import url(../blocks/page/page.css);
+@import url(../css/components/page/page.css);
 
-@import url(../blocks/header/header.css);
-@import url(../blocks/header/__block/__block.css);
-@import url(../blocks/header/__logo/__logo.css);
-@import url(../blocks/header/__navigation-list/__navigation-list.css);
-@import url(../blocks/header/__navigation-list-link/__navigation-list-link.css);
-@import url(../blocks/header/__burger-menu/__burger-menu.css);
-@import url(../blocks/header/__popup/__popup.css);
-@import url(../blocks/header/__popup/_open/_open.css);
-@import url(../blocks/header/__popup-navigation/__popup-navigation.css);
-@import url(../blocks/header/__popup-navigation-link/__popup-navigation-link.css);
+@import url(../css/components/header/header.css);
+@import url(../css/components/header/__block/__block.css);
+@import url(../css/components/header/__logo/__logo.css);
+@import url(../css/components/header/__navigation-list/__navigation-list.css);
+@import url(../css/components/header/__navigation-list-link/__navigation-list-link.css);
+@import url(../css/components/header/__burger-menu/__burger-menu.css);
+@import url(../css/components/header/__burger-menu/_close/_close.css);
 
-@import url(../blocks/main/main.css);
-@import url(../blocks/main/__cards-block/__cards-block.css);
+@import url(../css/components/popup/__popup.css);
+@import url(../css/components/popup/_open/_open.css);
+@import url(../css/components/popup/__navigation/__navigation.css);
+@import url(../css/components/popup/__navigation-link/__navigation-link.css);
 
-@import url(../blocks/card/card.css);
-@import url(../blocks/card/__img/__img.css);
-@import url(../blocks/card/header/__header.css);
-@import url(../blocks/card/__paragraph/__paragraph.css);
+@import url(../css/components/main/main.css);
+@import url(../css/components/main/__cards-block/__cards-block.css);
 
-@import url(../blocks/footer/footer.css);
-@import url(../blocks/footer/__block/__block.css);
-@import url(../blocks/footer/__copyrights/__copyrights.css);
-@import url(../blocks/footer/__logo/__logo.css);
+@import url(../css/components/card/card.css);
+@import url(../css/components/card/__img/__img.css);
+@import url(../css/components/card/header/__header.css);
+@import url(../css/components/card/__paragraph/__paragraph.css);
+
+@import url(../css/components/footer/footer.css);
+@import url(../css/components/footer/__block/__block.css);
+@import url(../css/components/footer/__copyrights/__copyrights.css);
+@import url(../css/components/footer/__logo/__logo.css);

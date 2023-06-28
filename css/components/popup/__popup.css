@@ -1,0 +1,14 @@
+.popup {
+  visibility: hidden;
+  position: absolute;
+  margin: 0;
+  padding: 34px 0 0;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  height: 100vh;
+  background-color: #ffffff;
+  z-index: 1;
+  transition: visibility ease-in-out 0.3s, transform ease-in-out 0.3s;
+  transform: translateY(-100vh)
+}

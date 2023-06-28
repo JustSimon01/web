@@ -1,0 +1,30 @@
+.card {
+  margin: 16px;
+  box-sizing: border-box;
+  padding: 48px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 343px;
+  border-radius: 12px;
+  background: #FFF;
+  box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.15);
+  transition: ease-in-out 0.3s;
+  cursor: pointer;
+}
+
+.card:hover {
+  box-shadow: 0px 4px 30px 0px rgba(67, 116, 229, 1);
+}
+
+.card:hover .card__img {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='72' height='72' fill='none'%3e%3cpath fill='%234374E5' d='M34.735 44.866a15.125 15.125 0 0 0-7.642-7.93L2.597 27.77a4.002 4.002 0 0 1 .211-7.585L66.801.19A3.995 3.995 0 0 1 71.81 5.2L51.814 69.191a4.003 4.003 0 0 1-7.529.303c-.223-.548-3.406-8.758-9.55-24.629Z'/%3e%3c/svg%3e");
+}
+
+
+@media screen and (min-width: 768px) {
+  .card {
+    max-width: 352px;
+  }
+}

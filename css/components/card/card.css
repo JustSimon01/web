@@ -1,18 +1,46 @@
+/* заодно уберем синюю подсветку при нажатии в Chrome */
 .card {
-  margin: 16px;
+  margin: 12px;
   box-sizing: border-box;
   padding: 48px 24px;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
+  min-height: 397px;
   max-width: 343px;
   border-radius: 12px;
   background: #FFF;
   box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.15);
   transition: ease-in-out 0.3s;
   cursor: pointer;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: transparent;
 }
+
+.card__header {
+  margin: 0 0 16px 0;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.card__paragraph {
+  margin: 0;
+  color: #222;
+  text-align: center;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.card__img {
+  width: 72px;
+  height: 72px;
+  margin: 0 0 32px 0;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='72' height='72' fill='none'%3e%3cpath fill='%237C7C7C' d='M34.735 44.866a15.125 15.125 0 0 0-7.642-7.93L2.597 27.77a4.002 4.002 0 0 1 .211-7.585L66.801.19A3.995 3.995 0 0 1 71.81 5.2L51.814 69.191a4.003 4.003 0 0 1-7.529.303c-.223-.548-3.406-8.758-9.55-24.629Z'/%3e%3c/svg%3e");
+}
+
 
 /* уберем баг с обычным ховером и разделим их логику */
 /* ховер для десктопов */
@@ -39,6 +67,8 @@
 
 @media screen and (min-width: 768px) {
   .card {
+    margin: 16px;
+    min-height: 375px;
     max-width: 352px;
   }
 }

@@ -1,15 +1,26 @@
 .main {
-  padding: 34px 0 94px;
+  margin: 62px 0 auto;
+  padding: 0;
   box-sizing: border-box;
-  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: rgba(238, 238, 238, 1);
 }
 
+.main__cards-block {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
 @media screen and (min-width: 768px) {
   .main {
-    padding: 60px 0 80px;
+    margin: auto;
+    padding: 120px 0 0;
   }
 }

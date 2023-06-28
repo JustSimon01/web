@@ -6,12 +6,98 @@
   background-color: #ffffff;
   height: 34px;
   width: 100%;
-  box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.247);
+  line-height: normal;
+  box-shadow: 0px 4px 10px 2px rgba(0, 0, 0, 0.1);
   z-index: 3;
+}
+
+.header__block {
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+}
+
+.header__logo {
+  width: 127px;
+  height: 18px;
+}
+
+.header__navigation-list {
+  display: none;
+  position: absolute
+}
+
+/* заодно уберем синюю подсветку при нажатии в Chrome */
+.header__navigation-list-link {
+  text-decoration: none;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 1);
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  transition: color 0.2s ease-in-out;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.header__burger-menu {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  height: 24px;
+  width: 24px;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none'%3e%3cpath fill='%23000' d='M21 12a.75.75 0 0 1-.75.75H3.75a.75.75 0 1 1 0-1.5h16.5A.75.75 0 0 1 21 12ZM3.75 6.75h16.5a.75.75 0 1 0 0-1.5H3.75a.75.75 0 0 0 0 1.5Zm16.5 10.5H3.75a.75.75 0 1 0 0 1.5h16.5a.75.75 0 1 0 0-1.5Z'/%3e%3c/svg%3e");
+  cursor: pointer;
+}
+
+.header__burger-menu_close {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none'%3e%3cpath fill='%23222' d='M17.824 16.975a.602.602 0 0 1-.849.85L12 12.847l-4.975 4.976a.6.6 0 1 1-.85-.849L11.153 12 6.176 7.025a.6.6 0 0 1 .849-.85L12 11.153l4.975-4.976a.6.6 0 0 1 .85.849L12.847 12l4.976 4.975Z'/%3e%3c/svg%3e");
 }
 
 @media screen and (min-width: 768px) {
   .header {
     height: 60px;
+  }
+
+  .header__logo {
+    width: 230px;
+    height: 32px;
+  }
+
+  .header__navigation-list {
+    padding: 0;
+    margin: 0;
+    position: unset;
+    list-style: none;
+    display: flex;
+    gap: 32px;
+  }
+
+  .header__burger-menu {
+    display: none;
+  }
+
+  .header {
+    height: 60px;
+  }
+}
+
+/* уберем баг с обычным ховером и разделим их логику */
+/* ховер для десктопов */
+@media (hover: hover) {
+  .header__navigation-list-link:hover {
+    color: rgba(67, 116, 229, 1);
+  }
+}
+
+/* экшен для мобильных устройств */
+@media (hover: none) {
+  .header__navigation-list-link:active {
+    color: rgba(67, 116, 229, 1);
   }
 }

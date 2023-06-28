@@ -14,14 +14,28 @@
   cursor: pointer;
 }
 
-.card:hover {
-  box-shadow: 0px 4px 30px 0px rgba(67, 116, 229, 1);
+/* уберем баг с обычным ховером и разделим их логику */
+/* ховер для десктопов */
+@media (hover: hover) {
+  .card:hover {
+    box-shadow: 0px 4px 30px 0px rgba(67, 116, 229, 1);
+  }
+
+  .card:hover .card__img {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='72' height='72' fill='none'%3e%3cpath fill='%234374E5' d='M34.735 44.866a15.125 15.125 0 0 0-7.642-7.93L2.597 27.77a4.002 4.002 0 0 1 .211-7.585L66.801.19A3.995 3.995 0 0 1 71.81 5.2L51.814 69.191a4.003 4.003 0 0 1-7.529.303c-.223-.548-3.406-8.758-9.55-24.629Z'/%3e%3c/svg%3e");
+  }
 }
 
-.card:hover .card__img {
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='72' height='72' fill='none'%3e%3cpath fill='%234374E5' d='M34.735 44.866a15.125 15.125 0 0 0-7.642-7.93L2.597 27.77a4.002 4.002 0 0 1 .211-7.585L66.801.19A3.995 3.995 0 0 1 71.81 5.2L51.814 69.191a4.003 4.003 0 0 1-7.529.303c-.223-.548-3.406-8.758-9.55-24.629Z'/%3e%3c/svg%3e");
-}
+/* экшен для мобильных устройств */
+@media (hover: none) {
+  .card:active {
+    box-shadow: 0px 4px 30px 0px rgba(67, 116, 229, 1);
+  }
 
+  .card:active .card__img {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='72' height='72' fill='none'%3e%3cpath fill='%234374E5' d='M34.735 44.866a15.125 15.125 0 0 0-7.642-7.93L2.597 27.77a4.002 4.002 0 0 1 .211-7.585L66.801.19A3.995 3.995 0 0 1 71.81 5.2L51.814 69.191a4.003 4.003 0 0 1-7.529.303c-.223-.548-3.406-8.758-9.55-24.629Z'/%3e%3c/svg%3e");
+  }
+}
 
 @media screen and (min-width: 768px) {
   .card {
